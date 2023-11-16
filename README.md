@@ -68,6 +68,8 @@ Possible future changes
 Customization: Modify parameters and functions to suit specific portfolio preferences and visualization requirements.
 Documentation: Refer to Riskfolio's official documentation for detailed explanations of available functions, parameters, and usage examples.
 
+Next steps will involve connection strategy to broker API and automating paper and live trading.
+
 
 
 
