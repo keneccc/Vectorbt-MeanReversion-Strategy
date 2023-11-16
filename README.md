@@ -35,3 +35,39 @@ Demonstrates a simple mean-reversion trading strategy using the `vectorbt` libra
 8. **Printing Results:**
    - The total returns of the strategy are printed using the `portfolio.total_profit()` method.
    - <img width="544" alt="image" src="https://github.com/keneccc/Vectorbt-MeanReversion-Strategy/assets/116320614/6791f60c-6356-4946-8da1-967a1d86f2bf">
+
+
+   **Using Riskfolio for Portfolio Selection and Visualization**
+Introduction
+Create an optimal portfolio based on historical asset returns. 
+
+Code Overview
+Step 1: Data Preparation
+Download Data: Retrieve historical price data for selected assets using Yahoo Finance (yfinance).
+Calculate Returns: Compute percentage changes in asset prices to generate return data.
+
+Step 2: **Portfolio Optimization**
+Portfolio Object: Create a HCPortfolio object from Riskfolio using the returns data.
+Optimization: Estimate optimal portfolio weights using the optimization() method with specific parameters:
+Model: HERC (Hierarchical Equal Risk Contribution), HRP (Hierarchical Risk Parity), or other available models.
+Correlation: Pearson correlation matrix for grouping assets in clusters.
+Risk Measure: Variance (MV).
+Risk-Free Rate: Set to 0 for this case.
+Linkage Method: Ward method for building clusters.
+Max K: Maximum number of clusters used in two different gap statistics.
+Leaf Order: Consider the optimal order of leafs in the dendrogram.
+
+Step 3: **Visualization Portfolio Weight Allocation**
+Pie Chart: Use Riskfolio's plot_pie() function from PlotFunctions to visualize the composition of the optimized portfolio:
+Display the pie chart illustrating the asset allocation based on calculated weights.
+Set parameters such as title, other categories, color map, height, and width.
+![image](https://github.com/keneccc/Vectorbt-MeanReversion-Strategy/assets/116320614/7b32167a-38e9-4476-a547-36342553d903)
+
+
+Possible future changes
+Customization: Modify parameters and functions to suit specific portfolio preferences and visualization requirements.
+Documentation: Refer to Riskfolio's official documentation for detailed explanations of available functions, parameters, and usage examples.
+
+
+
+
